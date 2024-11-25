@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 6de | My Order at a restaurant</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body
+  class="bg-primary max-h-full justify-center items-center h-full sm:h-full md:h-full sm:p-4 md:p-4 p-4 m-auto rounded-lg shadow-lg text-white font-pregular text-lg sm:overflow-scroll md:overflow-scroll overflow-scroll">
+  <div id="app" class="flex flex-col">
+    <header>
+      <div
+        class="h-full max-h-full p-4 rounded-lg shadow border-2 border-gray-700 dark:border-gray-800 bg-gray-700 dark:bg-gray-800">
+        <h2 class="text-2xl font-bold">
+          Lesson 06: 'age' variable with 'if' statement and save age for the discount to display in the console
+        </h2>
+        <hr class="my-4" />
+        <div class="mt-6">
+          <p>
+            This exercise 6d show the 'age' variable with 'if' statement and save age for the discount to display in the
+            console. As the amusement park, the discount is given to children less than and equal to 6 years old and
+            seniors over 65 years old. The age is set to 5 years old. The 'if' statement checks if the age is less than
+            or equal to 6 or greater than or equal to 65. If the condition is true, the console will display "You get a
+            discount!". Otherwise, it will display "You pay full price." Then, conditions are checked and the result is
+            displayed in the console as the followings:
+          </p>
+          <p>
+          <ul class="list-outside list-none space-y-3 indent-1 ml-4">
+            <li class="lightgreen-list-item mt-3 mr-4">Create a variable 'age' and save a person's age inside.</li>
+            <li class="lightgreen-list-item mt-3 mr-4">Create an if-Statement that checks if the person qualifies for a
+              discount. if they do, display 'Discount' in the console. Otherwise, display 'No discount' in the console
+              <br />
+              <b>Note:</b> try to use the || operator to check if the age is less than or equal to 6 or greater than or
+              equal to 65 in the solution.
+            </li>
+            <li class="lightgreen-list-item mt-3 mr-4">Try changing the 'age' variable to display different messages.
+            </li>
+          </ul>
+          </p>
+          <br />
+          <p>
+            Continuing from the previous exercise, the discount is only available for children less than and equal to 6
+            years old if it is not holiday. Create a variable: const isHoliday = true; Then, conditions are checked and
+            the result is displayed in the console as the followings:
+          </p>
+          <p>
+          <ul class="list-outside list-none space-y-3 indent-1 ml-4">
+            <li class="roundgreen-list-item mt-3 mr-4">Update the code so that in order to get a discount, the age must
+              be less than or equal to 6 or greater than or equal to 65 and isHoliday is false. People must meet the age
+              requirement and it is also not a holiday to get a discount.
+            </li>
+            <li class="roundgreen-list-item mt-3 mr-4">Create an if-Statement that checks if the person qualifies for a
+              discount. if they do, display 'Discount' in the console. Otherwise, display 'No discount' in the console
+              <br />
+              <b>Note:</b> && has a higher priority than || so for this to work correctly, we need to add brackets () to
+              control which code gets executed first.
+            </li>
+            <li class="roundgreen-list-item mt-3 mr-4">Try changing the 'isHoliday' variable to display different
+              messages.</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="bg-gray-700 dark:bg-gray-800 rounded-lg border border-gray-700 mt-3 p-4">
+          <h2 class="font-bold">Exercise 6d, and 6e</h2>
+          <div class="flex justify-center items-center">
+            <section
+              class="bg-primary w-full h-full p-4 m-auto rounded-lg shadow-lg border-2 border-gray-200 text-white font-pregular text-lg mt-1 mb-6 dark:border-gray-700 dark:bg-gray-800">
+              <h2 class="text-2xl font-bold tracking-tight text-blue-400">
+                Output Ground:
+              </h2>
+              <hr class="mt-4 line-clamp-1" />
+              <div id="log"
+                class="flex flex-col justify-between p-4 leading-normal object-cover w-full m-auto font-normal text-gray-700 dark:text-gray-400">
+              </div>
+            </section>
+          </div>
+          <div class="flex justify-end items-end">
+            <button class="back-to-home-button text-white bg-blue-600" title="Back to home"
+              onclick="window.location.href = `${window.location.origin}/index.html`">
+              Back to home
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="p-4 flex flex-col items-start justify-start mt-4 rounded-lg shadow border-2 border-gray-700 dark:border-gray-800 bg-gray-700 dark:bg-gray-800">
+        <p class="font-bold hidden">Footer</p>
+        <p class="text-right">
+          Copyright &copy; <span class="text-red-500" id="year">2024</span>
+        </p>
+        <p class="text-right">All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // Capture the original console.log function
+    const originalLog = console.log;
+    // Override the console.log function
+    console.log = (...messages) => {
+      // Call the original console.log function to keep the log in the console
+      originalLog.apply(console, messages);
+      // Convert messages to a string and append them to the div
+      const logDiv = document.getElementById('log');
+      if (logDiv) {
+        messages.forEach((message) => {
+          const messageElement = document.createElement('div');
+          messageElement.textContent = message.toString();
+          logDiv.appendChild(messageElement);
+        });
+      }
+    };
+
+    console.log("// Exercise 6d 'age' variable with 'if' statement and save age for the discount to display in the console");
+    const young_age = 5;
+    const old_age = 70;
+    const age = 30;
+    console.log("// The age is set to younger than 6 years old.");
+    if (young_age <= 6 || young_age >= 65) {
+      console.log("You get a discount!");
+    } else {
+      console.log("You pay full price.");
+    }
+
+    console.log("// The age is set to older than 65 years old.");
+    if (old_age <= 6 || old_age >= 65) {
+      console.log("You get a discount!");
+    } else {
+      console.log("You pay full price.");
+    }
+
+    console.log("// The age is set to teenagers and adults.");
+    if (age <= 6 || age >= 65) {
+      console.log("You get a discount!");
+    } else {
+      console.log("You pay full price.");
+    }
+    console.log("// Exercise 6e Has The discount if it is not a holiday to display in the console");
+    const ages = 5;
+    const check_day = new Date().getDay(); // Correctly gets the current day of the week
+    console.log("Today is day number: ", check_day);
+    const isHoliday = true;
+
+    if ((check_day === 0 || check_day === 6) && !isHoliday) {
+      console.log("Today is not a holiday.");
+    } else {
+      console.log("Today is a holiday.");
+      console.log("You pay full price.");
+      if ((ages <= 6 || ages >= 65) && !isHoliday) {
+        console.log("Discount");
+      } else {
+        console.log("No discount");
+      }
+    }
+
+    // && has a higher priority than || so for
+    // this to work correctly, we need to add
+    // brackets () around the || check to make
+    // sure that it gets done first.
+    if ((ages <= 6 || ages >= 65) && !isHoliday) {
+      console.log('Discount');
+    } else {
+      console.log('No discount');
+    }
+  </script>
+</body>
+
+</html>

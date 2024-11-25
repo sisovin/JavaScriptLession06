@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booleans and if-Statement in JavaScript</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body
+  class="bg-primary max-h-full justify-center items-center h-full sm:h-full md:h-full sm:p-4 md:p-4 p-4 m-auto rounded-lg shadow-lg text-white font-pregular text-lg sm:overflow-scroll md:overflow-scroll overflow-scroll">
+  <div class="flex flex-col">
+    <header>
+      <div id="app"
+        class="h-full max-h-full p-4 rounded-lg shadow border-2 border-gray-700 dark:border-gray-800 bg-gray-700 dark:bg-gray-800">
+        <h2 class="text-2xl font-bold">Lesson 06: Booleans and if-Statement in JavaScript</h2>
+        <hr class="my-4" />
+        <div class="mt-6">
+          <p class="mt-4">
+            What is Booleans and if-Statement in JavaScript? Booleans in JavaScript are a data type that can only have
+            two values: `true` or `false`. They are often used in
+            conditions to decide which code should be executed.
+
+            An `if` statement in JavaScript is used to execute a block of code only if a specified condition is true. If
+            the
+            condition is false, the code inside the block is not executed.
+
+            Here's a basic structure of an `if` statement:
+
+            ```javascript
+            if (condition) {
+            // code to be executed if condition is true
+            }
+            ```
+
+            Example:
+
+            ```javascript
+            let isRaining = true;
+
+            if (isRaining) {
+            console.log("Don't forget to take an umbrella!");
+            }
+            ```
+
+            In this example, the message will be logged to the console because `isRaining` is `true`. If `isRaining`
+            were `false`,
+            nothing would be logged.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div
+          class="bg-primary dark:bg-gray-800 rounded-lg border border-gray-700 mt-3 p-4 flex flex-col items-center justify-center overflow-hidden">
+          <h2 class="font-bold border-2 border-gray-400 bg-orange-500 w-full rounded text-white mb-4 text-center">
+            1. Explanation:
+          </h2>
+          <div class="text-white p-4">
+            <p class="mb-4">
+              YBooleans in JavaScript are a fundamental data type that represent truth values. They can only be one of
+              two values: true
+              or false. These values are often the result of comparisons or conditions and are crucial for control flow
+              in
+              programming, such as in if statements, loops, and any other place where a decision needs to be made based
+              on whether
+              something is true or false.
+            </p>
+            <p class="mb-4">
+              Here's a quick overview:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex flex-row">
+                <svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4"><b>true:</b> This represents something that is correct, on, or affirmative. In logical
+                  operations, true often represents a condition
+                  that has been met or an affirmative decision.
+                </p>
+              </li>
+              <li class="flex flex-row">
+                <svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4"><b>false:</b> Conversely, this represents something that is incorrect, off, or negative.
+                  In logical operations, false often represents
+                  a condition that has not been met or a negative decision.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 class="font-bold border-2 border-gray-400 bg-orange-500 w-full rounded text-white mb-4 text-center">
+            2. Context of Excerpt from the script:
+          </h2>
+          <p>
+            In the context of the excerpt from the active file, the lines::
+            <br />
+          <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+            <code class="text-white">
+              true; // Evaluates to true <br/>
+              false; // Evaluates to false <br/>
+              console.log(3 &lt; 5); // Evaluates to true <br/>
+              // if you want check the type of the variable <br />
+              console.log(typeof true); //Output: boolean <br />
+              console.log(typeof false); //Output: boolean <br />
+              console.log(typeof 'true'); //Output: string
+            </code>
+          </div>
+          </p>
+          <p class=" mt-3">
+            within the &lt;script&gt; tag, demonstrate the use of Boolean values in JavaScript, though in a somewhat
+            abstract manner.The true and false are standalone expressions here and don't do anything by themselves. The
+            console.log(3 &lt; 5); line, however, evaluates the expression 3 &lt; 5, which is true because 3 is indeed
+            less than 5, and then prints the result (true) to the console. Booleans are often the result of expressions,
+            such as comparisons (==, !=, &lt;,&gt;, &lt;=,&gt;=), logical operations(&&, ||, !), or even assignments
+            where a
+            condition
+            is being evaluated.They are essential for making decisions in code, allowing for different outcomes
+            based on
+            whether a condition is true or false.
+          </p>
+          <br />
+          <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+            <code class="text-white">
+                // comparisons Operators, we can use as below: <br/>
+                &lt; = less than, <br/>
+                &gt; greater than, <br/>
+                &lt;= less than or equal to, <br/> 
+                &gt;= greater than or equal to,  <br/>
+                 == equal to,  === , == <br/>
+                 != not equal to !== , != 
+              </code>
+          </div>
+          <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+            <p>
+              In JavaScript, === and == do not have the same meaning. They are both comparison operators, but they
+              differ in how they
+              compare values.
+              <br />
+
+            <ul class="space-y-3">
+              <li class="flex flex-row">
+                <svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4"><b>==</b> is the equality operator. It compares two values for equality, after
+                  converting both values to a common type. This
+                  type coercion can lead to unexpected results if you're not aware of the conversion rules.
+                </p>
+              </li>
+              <li class="flex flex-row">
+                <svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4"><b>===</b> is the strict equality operator. It compares both the value and the type of
+                  two variables, which means no type
+                  conversion is performed. If the values have different types, the comparison will be false.
+                </p>
+              </li>
+            </ul>
+            </p>
+            <h3 class="font-bold text-2xl font-pbold">
+              Example:
+            </h3>
+            <code class="text-white">
+                0 == '0'; // true, because '0' is converted to the number 0 before comparison
+                0 === '0'; // false, because one is a number and the other is a string
+              </code>
+          </div>
+          <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+            <code class="text-white">
+              // Order of Operations, we can use as below: <br/>
+              1. Parentheses ( ... ) <br/>
+              2. Exponentiation ** <br/>
+              3. Multiplication * and Division / <br/>
+              4. Addition + and Subtraction - <br/>
+              5. Logical NOT ! <br/>
+              6. Logical AND && <br/>
+              </code>
+          </div>
+          <div class="bg-gray-700 dark:bg-gray-800 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+            <h2 class="font-bold border-2 border-gray-400 bg-orange-500 w-full rounded text-white mb-4 text-center">
+              3. if-Statement:
+            </h2>
+            <div class="flex flex-row justify-center items-center gap-3">
+              <p>
+                As the if-Statement is used to execute a block of code only if a specified condition is true. Then, it
+                can let us write multiple groups of code and then decide which code to run. The syntax of the
+                if-Statement is as follows:
+              </p>
+            </div>
+            <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+              <code class="text-white">
+                if (condition) { <br/>
+                  // code to be executed if condition is true <br/>
+                }
+              </code>
+            </div>
+            <br />
+            <p>
+              We can also chain multiple conditions using else if, and provide a default block of code to execute if
+              none of the
+              conditions are true using else. <br />
+
+              Extended syntax with else if and else:
+            </p>
+            <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+              <code class="text-white">
+                if (condition1) { <br/>
+                  // code to be executed if condition1 is true <br/>
+                } else if (condition2) { <br/>
+                  // code to be executed if condition2 is true <br/>
+                } else { <br/>
+                  // code to be executed if none of the conditions are true <br/>
+                }
+              </code>
+            </div>
+            <br />
+            <h3 class="font-bold mb-3">Example:</h3>
+            <p>
+              Simple if statement:
+            </p>
+            <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+              <code class="text-white">
+                let score = 75; // Set the score to 75 <br/>
+                            
+                if (score > 70) { <br/>
+                  console.log("Pass"); <br/>
+                } <br/>
+                // Output: Pass
+              </code>
+            </div>
+            <br />
+            <p>
+              if-else statement:
+            </p>
+            <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+              <code class="text-white">
+                let score = 60; // Set the score to 60 <br/>
+                              
+                if (score > 70) { <br/>
+                    console.log("Pass"); <br/>
+                } else { <br/>
+                    console.log("Fail"); <br/>
+                } <br/>
+                // Output: Fail
+              </code>
+            </div>
+            <br />
+            <p>
+              if-else if-else statement:
+            </p>
+            <div class="bg-gray-800 dark:bg-gray-900 rounded-lg border border-gray-700 p-4 mt-2 w-full">
+              <code class="text-white">
+                let score = 60; // Set the score to 60 <br/>
+                              
+                if (score > 70) { <br/>
+                    console.log("Pass"); <br/>
+                } else if (score >= 50) { <br/>
+                    console.log("Resit"); <br/>
+                } else { <br/>
+                    console.log("Fail"); <br/>
+                } <br/>
+                // Output: Resit
+              </code>
+            </div>
+            <br />
+            <p>
+              These examples demonstrate how if statements can be used to control the flow of a program based on
+              different
+              conditions.
+            </p>
+          </div>
+        </div>
+        <section class="mt-3">
+          <div class="bg-gray-700 dark:bg-gray-800 rounded-lg border border-gray-700 p-4 flex flex-col">
+            <h2 class="font-bold text-2xl font-pbold">
+              Lesson 06: Exercises
+            </h2>
+            <hr class="my-4" />
+            <div class="bg-gray-700 dark:bg-gray-800 rounded-lg border border-gray-700 p-4 mt-1">
+              <h3 class="font-bold mb-3">Sample Project</h3>
+              <div
+                class="lg:flex lg:flex-row justify-end items-end gap-3 sm:flex-col lg:space-y-0 md:flex-col space-y-3">
+                <button class="back-to-home-button bg-green-500 text-black"
+                  onclick="window.location.href = `${window.location.origin}/src/rock-paper-scissors.html`">
+                  Rock Paper Scissors
+                </button>
+              </div>
+              <br />
+              <h3 class="font-bold mb-3">Exercise 6abc - 6cdefg - 6hijk</h3>
+              <div
+                class="lg:flex lg:flex-row justify-end items-end gap-3 sm:flex-col lg:space-y-0 md:flex-col space-y-3">
+                <button class="back-to-home-button bg-sky-500 text-black"
+                  onclick="window.location.href = `${window.location.origin}/src/6abc.html`">
+                  6abc
+                </button>
+                <button class="back-to-home-button bg-orange-500 text-black"
+                  onclick="window.location.href = `${window.location.origin}/src/6de.html`">
+                  6de
+                </button>
+                <button class="bg-purple-500 text-black"
+                  onclick="window.location.href = `${window.location.origin}/src/6fghij.html`">
+                  6fghij
+                </button>
+                <button class="bg-primary text-white"
+                  onclick="window.location.href = `${window.location.origin}/src/cartquantity.html`">
+                  Cart Quantity
+                </button>
+              </div>
+            </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="p-4 flex flex-col items-start justify-start mt-4 rounded-lg shadow border-2 border-gray-700 dark:border-gray-800 bg-gray-700 dark:bg-gray-800">
+        <p class="font-bold hidden">Footer</p>
+        <p class="text-right">
+          Copyright &copy; <span class="text-red-500" id="year">2024</span>
+        </p>
+        <p class="text-right">All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // Variable declaration and initialization, then assign with numbers
+    console.log("==========Booleans true or false in JavaScript==========");
+    true;
+    false;
+    console.log(3 < 5); //Output: true
+    console.log(3 > 5); //Output: false
+    console.log(5 == '5.00'); //Output: true
+    console.log(5 === '5.00'); //Output: false
+    console.log(5 != '5.00'); //Output: false
+    console.log(3 > 5 - 5); //Output: true
+    // if you want check the type of the variable
+    console.log(typeof true); //Output: boolean
+    console.log(typeof false); //Output: boolean
+    console.log(typeof 'true'); //Output: string
+
+    console.log("\n");
+    console.log("==========using if-Statement in JavaScript==========");
+    if (true) { // Simple if statement
+      console.log("Hello"); //Output: Hello
+    }
+
+    if (false) { // Simple if statement
+      console.log("Hello"); //Output: Nothing, not run the code 
+    }
+    // Simple if-statement
+    let score = 75;
+
+    if (score > 70) {
+      console.log("Pass");
+    }
+    // Output: Pass
+
+    // if-else statement
+    if (false) {
+      console.log("Hello"); //Output: Nothing, not run the code 
+    } else {
+      console.log("else"); //Output: else
+    }
+
+    if (true) {
+      console.log("Hello"); //Output: Hello
+    } else {
+      console.log("else"); //Output: Nothing, not run the code
+    }
+    console.log("==========Practical Example in JavaScript==========");
+    // Compare two numbers
+    if (30 >= 16) {
+      console.log('You can drive');
+    } else {
+      console.log('You cannot drive');
+    }
+    // Compare two numbers
+    let score1 = 65;
+
+    if (score1 > 70) {
+      console.log("Pass");
+    } else {
+      console.log("Fail");
+    }
+    // Output: Fail
+
+    // Compare two strings
+    if ('apple' === 'apple') {
+      console.log('The strings are equal');
+    } else {
+      console.log('The strings are not equal');
+    }
+
+    // Using if-else if-else statement
+    if (15 >= 16) {
+      console.log('You can drive');
+      console.log('Congrats');
+    } else if (15 >= 14) {
+      console.log('You can drive with supervision');
+    } else {
+      console.log('You cannot drive');
+    }
+
+    let score2 = 85;
+
+    if (score2 >= 90) {
+      console.log("Grade A");
+    } else if (score2 >= 80) {
+      console.log("Grade B");
+    } else if (score2 >= 70) {
+      console.log("Grade C");
+    } else {
+      console.log("Fail");
+    }
+    // Output: Grade B
+
+    // The Policy of driving is 18 years old
+    const age = 15;
+    const canDrive = age >= 18 ? 'Yes' : 'No';
+    console.log(canDrive); //Output: No
+    if (age >= 18) {
+      console.log('You can drive');
+    } else {
+      console.log('You cannot drive');
+    }
+
+    if (age >= 16) {
+      console.log('You can drive');
+      console.log('Congrats');
+    } else if (age >= 14) {
+      console.log('You can drive with supervision');
+    } else {
+      console.log('You cannot drive');
+    }
+
+    // Using Logical Operators AND (&&) and OR (||)
+    console.log(true && true); //Output: true
+    console.log(true && false); //Output: false
+    console.log(true || false); //Output: true
+    console.log(false || false); //Output: false
+    console.log(!true); //Output: false
+    console.log(!false); //Output: true
+
+    console.log(0.2 >= 0 && 0.2 < 1 / 3); //Output: true
+    console.log('============ truthy and falsy values ===========');
+    // Learn the Boolean on truthy and falsy values
+    if (5) {
+      console.log('truthy'); // Output: truthy
+    }
+
+    if (0) {
+      console.log('truthy'); // Output: Nothing, not run the code
+    }
+
+    if ('Hello') {
+      console.log('truthy'); // Output: truthy
+    }
+
+    const cartQuantity = 5;
+
+    if (cartQuantity > 0) {
+      console.log('Cart has products'); // Output: Cart has products 
+    }
+
+    console.log(!0); //Output: true
+    console.log('text' / 5); //Output: NaN (Not a Number)
+
+    let variable;
+    console.log(variable); //Output: undefined
+    console.log(null); //Output: null
+    console.log('' == false); //Output: true
+
+    console.log('============ Ternary, Guard, Default Operator ===========');
+    const result = true ? 'truthy' : 'falsy' // similar to if-else statement 
+    console.log(result); //Output: truthy
+
+    const result1 = 0 ? 'truthy' : 'falsy';
+    console.log(result1); //Output: falsy
+
+    false && console.log('Hello'); //Output: false // Guard Operator // similar to shortcut if (condition){console.log('Hello');}
+    true && console.log('Hello'); //Output: Hello // Guard Operator 
+
+    const message = false && 'hello'; //Output: false
+    console.log(message);
+
+    const messages = 5 && 'hello'; //Output: hello
+    console.log(messages);
+
+    const currency = 'EUR' || 'USD'; //Output: EUR // Default Operator
+    console.log(currency);
+
+    const currencies = undefined || 'USD'; //Output: USD // Default Operator
+    console.log(currencies);
+
+  </script>
+</body>
+
+</html>
